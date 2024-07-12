@@ -1,0 +1,5 @@
+
+// https://babeljs.io/setup#installation
+{
+    "presets": ["@babel/preset-env"]
+}

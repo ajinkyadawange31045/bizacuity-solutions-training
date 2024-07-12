@@ -1,0 +1,19 @@
+{
+  "name": "5.nodejsapplication",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev":"nodemon server.js"
+    
+  },
+  "keywords": [],
+  "author": "Ajinkya",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.5.0",
+    "nodemon": "^3.1.4"
+  }
+}
