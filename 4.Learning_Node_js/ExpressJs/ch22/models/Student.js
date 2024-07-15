@@ -26,14 +26,14 @@ const deleteDocbyID = async (id) => {
 
 
 // delete one document by ages
-const deleteOneDocbyID = async (a) => {
-    try {
-        const result = await studentModel.deleteOne(id);
-        console.log(result)
-    } catch (error) {
-        console.log(error)
-    }
-};
+// const deleteOneDocbyID = async (a) => {
+//     try {
+//         const result = await studentModel.deleteOne(id);
+//         console.log(result)
+//     } catch (error) {
+//         console.log(error)
+//     }
+// };
 
 const deleteOneDocbyage = async (a) => {
     try {
