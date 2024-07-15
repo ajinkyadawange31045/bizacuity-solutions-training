@@ -1,5 +1,5 @@
 {
-  "name": "ch16-mongoose",
+  "name": "ch18",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,6 @@
   "type": "module",
   "description": "",
   "dependencies": {
-    "ejs": "^3.1.10",
     "express": "^5.0.0-alpha.8",
     "mongoose": "^8.5.1"
   },

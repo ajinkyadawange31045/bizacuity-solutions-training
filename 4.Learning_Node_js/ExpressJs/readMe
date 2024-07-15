@@ -1,5 +1,3 @@
-
-
 ch2 - babel working
 ch3 - creating basic project using express generator tool
 ch4 - first express js application usin es6, and express application generator.
@@ -11,5 +9,10 @@ ch9 - approach toward express js
 ch10 - views in express js
 ch11 - Static files
 ch12 - Template Engine and render for .ejs
-
-ch16 -connection with mongoose
+ch17 - connection with mongoose
+ch16 - connect to mongodb through authentication 
+ch18 - models in express, to create various collections
+ch19 - Create or Insert Document using Mongoose in Express JS
+ch20 - Retrieve Document using Mongoose in Express JS
+ch21 - Update, updatemany
+ch22 - Delete, deletemany
