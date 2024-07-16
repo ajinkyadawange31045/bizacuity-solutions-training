@@ -1,0 +1,78 @@
+<%- include('./partials/header.ejs') %>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-sm-6 mt-5">
+            <h3 class="alert alert-success text-center"><b>Update Student</b></h3>
+            <form id="updateForm" action="/student/update/<%= data.id %>" method="post" novalidate>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" value="<%= data.name %>" required>
+                    <div class="invalid-feedback">
+                        Please provide a name.
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="age" class="form-label">Age</label>
+                    <input type="number" class="form-control" id="age" name="age" value="<%= data.age %>" min="18" required>
+                    <div class="invalid-feedback">
+                        Please provide an age between 18 and 60.
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="fees" class="form-label">Fees</label>
+                    <input type="number" class="form-control" id="fees" name="fees" value="<%= data.fees %>" min="5000" required>
+                    <div class="invalid-feedback">
+                        Please provide fees of at least 5000.
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <button type="submit" class="btn btn-warning">Update</button>
+                    <a href="/student" class="btn btn-secondary">Home</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('updateForm').addEventListener('submit', function(event) {
+        let form = this;
+        let isValid = true;
+        
+        // Check name
+        let name = form.name.value.trim();
+        if (name === '') {
+            isValid = false;
+            form.name.classList.add('is-invalid');
+        } else {
+            form.name.classList.remove('is-invalid');
+        }
+        
+        // Check age
+        let age = form.age.value;
+        if (age < 18 || age === '') {
+            isValid = false;
+            form.age.classList.add('is-invalid');
+        } else {
+            form.age.classList.remove('is-invalid');
+        }
+        
+        // Check fees
+        let fees = form.fees.value;
+        if (fees < 5000 || fees === '') {
+            isValid = false;
+            form.fees.classList.add('is-invalid');
+        } else {
+            form.fees.classList.remove('is-invalid');
+        }
+        
+        if (!isValid) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
+    });
+</script>
+
+<%- include('./partials/footer.ejs') %>
+ 
